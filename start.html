@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stars.css">
+    
+</head>
+
+<body>
+    <section>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </section>
+    <div class="icon">
+        <img src="asset/ghi.gif" alt="">
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <p>Ada pesan buat kamu</p>
+            <img src="asset/220249-removebg-preview.png" alt="Gambar Bergoyang" class="goyang" id="goyangImage">
+            <p>Tekan untuk membuka</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById('goyangImage').addEventListener('click', function () {
+            Swal.fire({
+                title: 'Eitss!! Tunggu dulu',
+                text: 'Layarnya hp di rotate dulu yakk',
+                imageUrl: 'asset/stop.gif',  /* Ganti dengan path gambar Anda */
+                imageWidth: 200,
+                imageHeight: 160,
+                imageAlt: 'Custom image',
+                confirmButtonText: 'Lanjut'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'index.html'; // Ganti dengan URL halaman tujuan
+                }
+            });
+        });
+    </script>
+</body>
+
+
+</html>

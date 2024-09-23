@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: MyFont;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    /* background: linear-gradient(180deg, #ff6ec4 0%, #7873f5 100%); */
+    background-image: url(asset/nsea.jpg);
+    background-size: cover; /* Ensures background covers entire viewport */
+    background-attachment: fixed; /* Fixes the background in place */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Gaya untuk membuat gambar bergoyang */
+.goyang {
+    width: 150px;
+    animation: goyang 0.5s infinite alternate;
+}
+
+@keyframes goyang {
+    0% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+.container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+/* Gaya untuk card */
+/* Gaya untuk card */
+.card {
+    text-align: center;
+    font-size: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.6), 0 6px 20px rgba(0, 0, 0, 0.19);
+    backdrop-filter: blur(10px);
+    font-weight: bold;
+    color: #fff; /* Warna font putih */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), 0 0 10px rgba(255, 255, 255, 0.5); /* Shadow untuk semua teks dalam card */
+}
+
+
+
+/* Gaya untuk teks */
+.card p {
+    margin: 10px 0;
+    color: #fff; /* Warna font putih */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), 0 0 10px rgba(255, 255, 255, 0.5); /* Shadow hitam dengan efek glow putih */
+}
+
+
+@font-face{
+    font-family: myFont;
+    src:url(Happy\ Paradise.otf)
+}
+
+.icon img {
+    width: 150px; /* Sesuaikan ukuran gambar */
+    height: 150px; /* Sesuaikan ukuran gambar */
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Border putih bersinar */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.6), 0 6px 20px rgba(0, 0, 0, 0.19); /* Shadow dengan efek cahaya */
+    backdrop-filter: blur(10px); /* Efek blur opsional */
+    object-fit: cover; /* Agar gambar pas dalam bingkai bulat */
+}
+
+.icon{
+    padding-bottom: 35px;
+}

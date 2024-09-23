@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Product Sans', sans-serif;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(asset/nsea.jpg);
+    background-size: cover; /* Ensures the background covers the whole viewport */
+    background-position: center; /* Centers the background */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-size: 3rem;
+    color: white; /* Warna teks putih */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Efek menyala dengan bayangan lembut */
+    opacity: 0; /* Awalnya tidak terlihat */
+    animation: fadeIn 3s ease-in-out forwards; /* Animasi muncul perlahan */
+}
+
+/* Keyframes untuk animasi fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Tidak terlihat di awal */
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.2); /* Bayangan awal lebih kecil */
+    }
+    100% {
+        opacity: 1; /* Muncul sepenuhnya */
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Efek menyala lebih kuat */
+    }
+}
+
+section {
+    display: none;
+    /* Semua section disembunyikan diawal */
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+section.active {
+    display: block; /* Hanya section aktif yang ditampilkan */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: transparent; /* Background transparan */
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Border putih menyala */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Efek menyala pada tombol */
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    position: absolute;
+    bottom: 10px;
+    right: 10px; /* Menempatkan tombol di sebelah kanan */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Warna transparan saat hover */
+    border-color: rgba(255, 255, 255, 1); /* Border lebih terang saat hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1); /* Efek glow lebih kuat */
+}
+
+button::before {
+    content: "{ Lanjut }"; /* Mengganti teks tombol */
+}
+
+.icon img {
+    width: 120px; /* Sesuaikan ukuran gambar */
+    height: 120px; /* Sesuaikan ukuran gambar */
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Border putih bersinar */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.6), 0 6px 20px rgba(0, 0, 0, 0.19); /* Shadow dengan efek cahaya */
+    backdrop-filter: blur(10px); /* Efek blur opsional */
+    object-fit: cover; /* Agar gambar pas dalam bingkai bulat */
+}
+
+.icon {
+    padding-bottom: 20px;
+}
+
+.card {
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
