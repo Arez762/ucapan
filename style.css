@@ -79,10 +79,6 @@ button:hover {
     box-shadow: 0 0 15px rgba(255, 255, 255, 1); /* Efek glow lebih kuat */
 }
 
-button::before {
-    content: "{ Lanjut }"; /* Mengganti teks tombol */
-}
-
 .icon img {
     width: 120px; /* Sesuaikan ukuran gambar */
     height: 120px; /* Sesuaikan ukuran gambar */
@@ -91,10 +87,6 @@ button::before {
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.6), 0 6px 20px rgba(0, 0, 0, 0.19); /* Shadow dengan efek cahaya */
     backdrop-filter: blur(10px); /* Efek blur opsional */
     object-fit: cover; /* Agar gambar pas dalam bingkai bulat */
-}
-
-.icon {
-    padding-bottom: 20px;
 }
 
 .card {
