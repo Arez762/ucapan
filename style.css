@@ -20,7 +20,7 @@ body {
 }
 
 p {
-    font-size: 3rem;
+    font-size: 2rem;
     color: white; /* Warna teks putih */
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Efek menyala dengan bayangan lembut */
     opacity: 0; /* Awalnya tidak terlihat */
